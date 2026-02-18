@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import FlashCard from './FlashCard'
 
 function App() {
   return (
-    <h1>Testi</h1>
+    <FlashCard />
   )
 }
 
