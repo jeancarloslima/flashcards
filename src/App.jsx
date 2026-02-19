@@ -7,6 +7,7 @@ function App() {
   return (
     <main>
       <FlashCard />
+      <BotoesCertoErrado />
     </main>
   )
 }
