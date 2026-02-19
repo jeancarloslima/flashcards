@@ -1,0 +1,14 @@
+#botoes-certo-errado {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#btn-certo {
+    background-color: #8ac926;
+}
+
+#btn-errado {
+    background-color: #ff595e;
+}

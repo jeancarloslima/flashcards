@@ -1,8 +1,10 @@
+import './botoes-certo-errado.css'
+
 export default function BotoesCertoErrado() {
     return (
-        <div className="botoes-certo-errado">
-            <button id="btn-certo"></button>
-            <button id="btn-errado"></button>
+        <div id="botoes-certo-errado">
+            <button id="btn-certo">CORRETO</button>
+            <button id="btn-errado">INCORRETO</button>
         </div>
     )
 }
