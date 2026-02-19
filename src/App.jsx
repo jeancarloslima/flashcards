@@ -3,6 +3,7 @@ import './App.css'
 import FlashCard from './FlashCard'
 import BotoesCertoErrado from './BotoesCertoErrado'
 import ListaDeBaralhos from './ListaDeBaralhos'
+import BotaoAdicionarCard from './BotaoAdicionarCard'
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
         <FlashCard />
         <BotoesCertoErrado />
       </main>
+
+      <footer>
+        <BotaoAdicionarCard />
+      </footer>
     </>
   )
 }
