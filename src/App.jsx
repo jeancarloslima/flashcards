@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import FlashCard from './FlashCard'
+import BotoesCertoErrado from './BotoesCertoErrado'
 
 function App() {
   return (
-    <FlashCard />
+    <main>
+      <FlashCard />
+    </main>
   )
 }
 

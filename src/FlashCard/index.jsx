@@ -1,5 +1,10 @@
-export default function FlashCard() {
+import './flash-card.css'
+
+export default function FlashCard( {pergunta, resposta} ) {
     return (
-        <h1>Teste de flashcard</h1>
+        <div className="flashcard">
+            <p className="pergunta">Work</p>
+            <p className="resposta">Trabalhar</p>
+        </div>
     )
 }
