@@ -29,6 +29,11 @@
     color: #FFF;
 }
 
+.baralho-selecionado {
+    background-color: #FFF;
+    color: #242424;
+}
+
 .item-baralho:hover {
     background-color: #FFF;
     color: #242424;
