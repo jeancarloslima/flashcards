@@ -1,3 +1,52 @@
+#lista-de-baralhos-container {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
 #lista-de-baralhos {
-    list-style: none;
+    width: 100%;
+    display: flex;
+    gap: .7rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.item-baralho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 100px;
+    height: 100px;
+    padding: .5rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.item-baralho:hover {
+    background-color: #FFF;
+    color: #242424;
+}
+
+.item-baralho::-webkit-scrollbar {
+    display: none;
+}
+
+.item-baralho svg {
+    font-size: 24px;
+}
+
+#btn-adicionar-baralho {
+    width: 30px;
+    height: 100px;
+    padding: 0;
+    cursor: pointer;
 }
