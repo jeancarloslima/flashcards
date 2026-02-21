@@ -13,6 +13,8 @@
     padding: .5rem;
     border: 1px solid white;
     border-radius: 8px;
+    background-color: #242424;
+    color: #FFF;
     font-size: .9rem;
     font-weight: 600;
     cursor: pointer;
@@ -25,8 +27,6 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #242424;
-    color: #FFF;
 }
 
 .baralho-selecionado {
@@ -34,7 +34,8 @@
     color: #242424;
 }
 
-.item-baralho:hover {
+.item-baralho:hover,
+#btn-adicionar-baralho:hover {
     background-color: #FFF;
     color: #242424;
 }
@@ -49,11 +50,4 @@
 
 #btn-adicionar-baralho {
     font-size: 1.5rem;
-    background-color: #FFF;
-    color: #242424;
-}
-
-#btn-adicionar-baralho:hover {
-    background-color: #242424;
-    color: #FFF;
 }
