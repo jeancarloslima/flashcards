@@ -5,10 +5,30 @@
     justify-content: space-between;
 }
 
+.btn-certo-errado {
+    width: 100px;
+    height: 30px;
+    background-color: #FFF;
+    color: #242424;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+
 #btn-certo {
+    border-color: #8ac926;
+}
+
+#btn-certo:hover {
     background-color: #8ac926;
 }
 
 #btn-errado {
+    border-color: #ff595e;
+}
+
+#btn-errado:hover {
     background-color: #ff595e;
 }
