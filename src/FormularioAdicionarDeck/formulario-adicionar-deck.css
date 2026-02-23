@@ -1,4 +1,4 @@
-#formulario-adicionar-card {
+#formulario-adicionar-deck {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,8 +14,7 @@
     z-index: 2;
 }
 
-#pergunta-card,
-#resposta-card {
+#nome-deck {
     width: 220px;
     height: 40px;
     border: 1px solid #242424;
@@ -26,12 +25,11 @@
     padding: .7rem;
 }
 
-#pergunta-card::placeholder,
-#resposta-card::placeholder {
+#nome-deck::placeholder {
     color: #818080;
 }
 
-#btn-salvar-card {
+#btn-salvar-deck {
     width: 150px;
     height: 50px;
     background-color: #242424;
@@ -43,7 +41,7 @@
     transition: .3s;
 }
 
-#btn-salvar-card:hover {
+#btn-salvar-deck:hover {
     background-color: #FFF;
     color: #242424;
 }
