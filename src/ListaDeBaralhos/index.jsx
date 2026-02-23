@@ -5,9 +5,6 @@ export default function ListaDeBaralhos( {abrirFormularioDeck} ) {
     return (
         <ul id="lista-de-baralhos">
             <li className="item-baralho baralho-selecionado"><TbCards /> <span>INGLÊS</span></li>
-            <li className="item-baralho"><TbCards /> <span>Programação</span></li>
-            <li className="item-baralho"><TbCards /> <span>INGLÊS</span></li>
-            <li className="item-baralho"><TbCards /> <span>INGLÊS</span></li>
             <button id="btn-adicionar-baralho" onClick={abrirFormularioDeck}>+</button>
         </ul>
     )
