@@ -1,3 +1,15 @@
+.modal-overlay {
+    width: 100dvw;
+    min-height: max(700px, 100dvh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #47474781;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 #formulario-adicionar-card {
     display: flex;
     flex-direction: column;
