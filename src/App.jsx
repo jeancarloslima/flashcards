@@ -11,6 +11,11 @@ import FormularioAdicionarDeck from "./FormularioAdicionarDeck";
 function App() {
   const [isFormDeckVisible, setIsFormDeckVisible] = useState(false);
   const [isFormCardVisible, setIsFormCardVisible] = useState(false);
+  const [acaoCard, setAcaoCard] = useState(null);
+
+  const handleAcaoCard = direcao => {
+    setAcaoCard(direcao);
+  }
 
   return (
     <>
@@ -34,8 +39,8 @@ function App() {
           )}
         </AnimatePresence>
 
-        <FlashCard />
-        <BotoesCertoErrado />
+        <FlashCard acaoCard={acaoCard} />
+        <BotoesCertoErrado onAction={handleAcaoCard} />
       </main>
 
       <footer>
