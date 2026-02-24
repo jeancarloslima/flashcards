@@ -10,7 +10,3 @@
     cursor: pointer;
     transition: .3s;
 }
-
-#btn-adicionar-card:hover {
-    transform: translateY(-10px);
-}

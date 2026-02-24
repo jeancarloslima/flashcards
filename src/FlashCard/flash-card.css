@@ -79,10 +79,10 @@
   align-items: center;
   justify-content: center;
   border-radius: 16px;
-  border: 1px solid #FFF;
+  border: 1px solid transparent;
   font-weight: 600;
   font-size: 24px;
-  transition: .5s ease-in;
+  transition: .5s;
 }
 
 .card-frente {
@@ -93,5 +93,6 @@
 .card-verso {
   background-color: #242424;
   color: #FFF;
+  border-color: #FFF;
   transform: rotateY(180deg);
 }
