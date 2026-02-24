@@ -12,9 +12,14 @@ function App() {
   const [isFormDeckVisible, setIsFormDeckVisible] = useState(false);
   const [isFormCardVisible, setIsFormCardVisible] = useState(false);
   const [acaoCard, setAcaoCard] = useState(null);
+  const [flashcards, setFlashcards] = useState([]);
 
-  const handleAcaoCard = direcao => {
+  const handleAcaoCard = (direcao) => {
     setAcaoCard(direcao);
+  };
+
+  function adicionarFlashcard(novoFlashcard) {
+    setFlashcards([...flashcards, novoFlashcard]);
   }
 
   return (
@@ -30,6 +35,7 @@ function App() {
           {isFormCardVisible && (
             <FormularioAdicionarCard
               fecharFormularioCard={() => setIsFormCardVisible(false)}
+              adicionaFlashcardNaLista={adicionarFlashcard}
             />
           )}
           {isFormDeckVisible && (
@@ -39,7 +45,10 @@ function App() {
           )}
         </AnimatePresence>
 
-        <FlashCard acaoCard={acaoCard} />
+        {flashcards.length > 0 && (
+          <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} />
+        )}
+
         <BotoesCertoErrado onAction={handleAcaoCard} />
       </main>
 

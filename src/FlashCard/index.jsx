@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./flash-card.css";
 
-export default function FlashCard( {acaoCard} ) {
+export default function FlashCard( {pergunta, resposta, acaoCard} ) {
   const [flipped, setFlipped] = useState(false);
   let classeAcaoCard = ''
   if (acaoCard === "certo") classeAcaoCard = "card-certo";
@@ -11,10 +11,10 @@ export default function FlashCard( {acaoCard} ) {
     <div className="flashcard" onClick={() => setFlipped(!flipped)}>
       <div className={`card ${flipped ? "is-flipped" : ""} ${classeAcaoCard}`}>
         <div className="card-face card-frente">
-          <p className="pergunta">Work</p>
+          <p className="pergunta">{pergunta}</p>
         </div>
         <div className="card-face card-verso">
-          <p className="resposta">Trabalhar</p>
+          <p className="resposta">{resposta}</p>
         </div>
       </div>
     </div>
