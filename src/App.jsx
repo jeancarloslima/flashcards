@@ -12,11 +12,16 @@ function App() {
   const [isFormDeckVisible, setIsFormDeckVisible] = useState(false);
   const [isFormCardVisible, setIsFormCardVisible] = useState(false);
   const [acaoCard, setAcaoCard] = useState(null);
+  const [decks, setDecks] = useState([]);
   const [flashcards, setFlashcards] = useState([]);
 
   const handleAcaoCard = (direcao) => {
     setAcaoCard(direcao);
   };
+
+  function adicionarDeck(novoDeck) {
+    setDecks([...decks, novoDeck]);
+  }
 
   function adicionarFlashcard(novoFlashcard) {
     setFlashcards([...flashcards, novoFlashcard]);
@@ -27,6 +32,7 @@ function App() {
       <header>
         <ListaDeBaralhos
           abrirFormularioDeck={() => setIsFormDeckVisible(true)}
+          decks={decks}
         />
       </header>
 
@@ -41,6 +47,7 @@ function App() {
           {isFormDeckVisible && (
             <FormularioAdicionarDeck
               fecharFormularioDeck={() => setIsFormDeckVisible(false)}
+              adicionarDeckNaLista={adicionarDeck}
             />
           )}
         </AnimatePresence>
