@@ -12,7 +12,7 @@ export default function FormularioAdicionarDeck({ fecharFormularioDeck }) {
         exit={{ y: -50, opacity: 0 }}
         trasition={{ duration: 0.3 }}
       >
-        <input type="text" id="nome-deck" placeholder="Inglês" />
+        <input type="text" id="nome-deck" placeholder="Inglês" required />
         <input
           type="submit"
           id="btn-salvar-deck"

@@ -12,8 +12,8 @@ export default function FormularioAdicionarCard({ fecharFormularioCard }) {
         exit={{ y: -50, opacity: 0 }}
         trasition={{ duration: 0.3 }}
       >
-        <input type="text" id="pergunta-card" placeholder="Work" />
-        <input type="text" id="resposta-card" placeholder="Trabalhar" />
+        <input type="text" id="pergunta-card" placeholder="Work" required/>
+        <input type="text" id="resposta-card" placeholder="Trabalhar" required/>
         <input
           type="submit"
           id="btn-salvar-card"
