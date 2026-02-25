@@ -37,32 +37,8 @@
   pointer-events: none;
 }
 
-.flashcard-quantidade-1:after {
-  height: 30px;
-}
-
-.flashcard-quantidade-2:after,
-.flashcard-quantidade-2:before {
-  height: 30px;
-}
-
-.flashcard::after,
-.flashcard::before {
-  content: "";
-  width: 300px;
-  position: absolute;
-  border-radius: 16px 16px 0 0;
-  cursor: auto;
-}
-
-.flashcard::after {
-    background-color: #686868cb;
-    top: -33px;
-}
-
-.flashcard::before {
-  background-color: #363636cb;
-  top: -66px;
+.card.entrada {
+  animation: fade .5s;
 }
 
 .card {
@@ -104,4 +80,23 @@
   color: #FFF;
   border-color: #FFF;
   transform: rotateY(180deg);
+}
+
+@keyframes fade {
+  0% {
+    transform: translateY(-66px);
+    height: 0px;
+    opacity: 0;
+  }
+
+  70% {
+    height: 50%;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    height: 100%;
+    opacity: 1;
+  }
 }

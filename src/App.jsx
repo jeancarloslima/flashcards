@@ -15,8 +15,23 @@ function App() {
   const [decks, setDecks] = useState([]);
   const [flashcards, setFlashcards] = useState([]);
 
+  let acertos = 0;
+  let erros = 0;
+
   const handleAcaoCard = (direcao) => {
     setAcaoCard(direcao);
+
+    setFlashcards(lista => lista.slice(1));
+
+    setTimeout(() => {
+      setAcaoCard(null);
+    }, 500);
+    
+    if (direcao === "certo") {
+      acertos++;
+    } else {
+      erros++;
+    }
   };
 
   function adicionarDeck(novoDeck) {
@@ -25,8 +40,6 @@ function App() {
 
   function adicionarFlashcard(novoFlashcard) {
     setFlashcards([...flashcards, novoFlashcard]);
-    console.log(flashcards);
-    
   }
 
   return (
@@ -54,12 +67,8 @@ function App() {
           )}
         </AnimatePresence>
 
-        {flashcards.length > 0 && flashcards.length < 2 && (
-          <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} quantidade={1} />
-        )}
-
-        {flashcards.length > 1 && (
-          <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} quantidade={2} />
+        {flashcards.length > 0 && (
+          <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} />
         )}
 
         {flashcards.length < 1 && (
