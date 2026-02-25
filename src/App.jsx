@@ -52,8 +52,16 @@ function App() {
           )}
         </AnimatePresence>
 
-        {flashcards.length > 0 && (
-          <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} />
+        {flashcards.length > 0 && flashcards.length < 2 && (
+          <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} quantidade={1} />
+        )}
+
+        {flashcards.length > 2 && (
+          <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} quantidade={2} />
+        )}
+
+        {flashcards.length < 1 && (
+          <FlashCard acaoCard={acaoCard} />
         )}
 
         <BotoesCertoErrado onAction={handleAcaoCard} />
