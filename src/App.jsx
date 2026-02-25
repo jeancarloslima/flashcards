@@ -25,6 +25,8 @@ function App() {
 
   function adicionarFlashcard(novoFlashcard) {
     setFlashcards([...flashcards, novoFlashcard]);
+    console.log(flashcards);
+    
   }
 
   return (
@@ -56,7 +58,7 @@ function App() {
           <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} quantidade={1} />
         )}
 
-        {flashcards.length > 2 && (
+        {flashcards.length > 1 && (
           <FlashCard pergunta={flashcards[0].pergunta} resposta={flashcards[0].resposta} acaoCard={acaoCard} quantidade={2} />
         )}
 

@@ -8,7 +8,7 @@ export default function FlashCard( {pergunta, resposta, acaoCard, quantidade} ) 
   if (acaoCard === "incorreto") classeAcaoCard = "card-incorreto";
 
   return (
-    <div className={`flashcard ${quantidade < 2 ? "flashcard-quantidade-1" : quantidade > 2 ? "flashcard-quantidade-2" : ""}`} onClick={() => setFlipped(!flipped)}>
+    <div className={`flashcard ${quantidade ? `flashcard-quantidade-${quantidade}` : ""}`} onClick={() => setFlipped(!flipped)}>
       <div className={`card ${flipped ? "is-flipped" : ""} ${classeAcaoCard}`}>
         <div className="card-face card-frente">
           <p className="pergunta">{pergunta ? pergunta : "Não há cards na lista. Crie ou selecione um baralho e adicione cards para começar"}</p>
