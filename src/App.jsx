@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 import Carta from "./components/Carta";
+import cardSound from "./assets/card-slide-3.ogg";
 
 const cartasIniciais = [
   {
@@ -20,6 +21,7 @@ function App() {
   const [cartaVirada, setcartaVirada] = useState(false);
   const [acertos, setAcertos] = useState(0);
   const [totalPerguntas, setTotalPerguntas] = useState(cartasIniciais.length);
+  const audioCardRef = useRef(new Audio(cardSound));
 
   function handleViraCarta() {
     setcartaVirada(!cartaVirada);
@@ -32,6 +34,9 @@ function App() {
 
     setcartaVirada(false);
     setCartas((cartasAtuais) => cartasAtuais.slice(0, -1));
+
+    audioCardRef.current.currentTime = 0
+    audioCardRef.current.play();
   }
 
   return (
