@@ -2,8 +2,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100dvw;
   min-height: max(700px, 100dvh);
   padding: 2rem 1rem;
+}
+
+.lista-cartas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 2rem;
+  width: 300px;
+  height: 225px;
+  position: relative;
+  border: 1px solid #FFF;
+  border-radius: 16px;
+}
+
+.container-botoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.btn-correcao {
+  width: 120px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-correto {
+  background-color: #06a178;
+  border-color: #06a178;
+}
+
+.btn-incorreto {
+  background-color: #b33653;
+  border-color: #b33653;
 }
