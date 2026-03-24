@@ -8,13 +8,53 @@ import cardShuffleSound from "./assets/card-fan-1.ogg";
 const cartasIniciais = [
   {
     id: 1,
-    frente: "need",
-    verso: "precisar",
+    frente: "Night",
+    verso: "Noite",
   },
   {
     id: 2,
-    frente: "make",
-    verso: "fazer",
+    frente: "Eyes",
+    verso: "Olhos",
+  },
+  {
+    id: 3,
+    frente: "Hello",
+    verso: "Olá",
+  },
+  {
+    id: 4,
+    frente: "Help",
+    verso: "Ajuda / Socorro!",
+  },
+  {
+    id: 5,
+    frente: "Light",
+    verso: "Luz",
+  },
+  {
+    id: 6,
+    frente: "Love",
+    verso: "Amor",
+  },
+  {
+    id: 7,
+    frente: "Happiness",
+    verso: "Felicidade",
+  },
+  {
+    id: 8,
+    frente: "Cat",
+    verso: "Gato",
+  },
+  {
+    id: 9,
+    frente: "Dog",
+    verso: "Cachorro",
+  },
+  {
+    id: 10,
+    frente: "Smile",
+    verso: "Sorrir / Sorriso",
   },
 ];
 
