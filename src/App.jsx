@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import "./App.css";
 import Carta from "./components/Carta";
 import cardSound from "./assets/card-slide-3.ogg";
+import cardFlipSound from "./assets/card-shove-1.ogg";
+import cardShuffleSound from "./assets/card-fan-1.ogg";
 
 const cartasIniciais = [
   {
@@ -22,9 +24,14 @@ function App() {
   const [acertos, setAcertos] = useState(0);
   const [totalPerguntas, setTotalPerguntas] = useState(cartasIniciais.length);
   const audioCardRef = useRef(new Audio(cardSound));
+  const audioCardFlipRef = useRef(new Audio(cardFlipSound));
+  const audioCardShuffleRef = useRef(new Audio(cardShuffleSound));
 
   function handleViraCarta() {
     setcartaVirada(!cartaVirada);
+
+    audioCardFlipRef.current.currentTime = 0;
+    audioCardFlipRef.current.play();
   }
 
   function handleCorrecao(event) {
@@ -42,6 +49,8 @@ function App() {
   function handleReinicio() {
     setCartas(cartasIniciais);
     setAcertos(0);
+
+    audioCardShuffleRef.current.play();
   }
 
   return (
