@@ -14,6 +14,7 @@
   justify-content: center;
   text-align: center;
   line-height: 2rem;
+  padding: 1rem;
   width: 300px;
   height: 225px;
   position: relative;
@@ -44,4 +45,10 @@
 .btn-incorreto {
   background-color: #b33653;
   border-color: #b33653;
+}
+
+.btn-reinicia {
+  margin: auto;
+  background-color: #118ab2;
+  border-color: #118ab2;
 }
