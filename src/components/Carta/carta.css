@@ -8,7 +8,13 @@
     width: 300px;
     height: 225px;
     background-color: #FFF;
+    border: 1px solid #FFF;
     border-radius: 16px;
     color: #242424;
     cursor: pointer;
+}
+
+.carta-virada {
+    background-color: #242424;
+    color: #FFF;
 }

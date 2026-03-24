@@ -108,6 +108,7 @@ function App() {
                   noCLique={handleViraCarta}
                   key={carta.id}
                   texto={!cartaVirada ? carta.frente : carta.verso}
+                  estado={cartaVirada}
                 />
               ))}
           </ul>
